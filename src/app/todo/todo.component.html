@@ -1,0 +1,23 @@
+
+
+<main class="main">
+    <section>
+  <h1>TODO List</h1>
+  <p>A place to store your todos</p>
+  <p>Filter your to-dos</p>
+  <ol class="num">
+    <li *ngFor="let todo of toDoArray">
+      <p [ngClass]="{ done: todo.completed }">
+        <button class="compt" *ngIf="!todo.completed">complete</button>{{ todo.task }}
+        <i class="fas fa-times"></i>
+      </p>
+    </li>
+  </ol>
+  <form>
+  <label class="addToo">Add your to to-do</label><input type="text" id="addToo">
+  
+  <button class="submit">Add</button>
+  </form>
+  </section>
+  
+</main>
